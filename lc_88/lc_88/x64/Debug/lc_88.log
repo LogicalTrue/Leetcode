@@ -1,3 +1,2 @@
 ﻿  lc_88.cpp
-C:\Users\alanm\source\repos\lc_88\lc_88\lc_88.cpp(11,24): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
-  lc_88.vcxproj -> C:\Users\alanm\source\repos\lc_88\x64\Debug\lc_88.exe
+  lc_88.vcxproj -> C:\Users\alanm\source\repos\Leetcode\lc_88\x64\Debug\lc_88.exe

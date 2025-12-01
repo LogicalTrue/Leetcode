@@ -1,33 +1,27 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
+
 
 
 class Solution {
 
 public:
     void merge(std::vector<int>& nums1, int m, std::vector<int>& nums2, int n) {
-        for (int i = 0; i < n; ++i) {
-            int n = nums2[i];
-            for (int j = nums1.size() - 1; j >= 0; j--) {
-                int n2 = nums1[j];
-                
-                if (n2 != 0) {
-                    if (n <= n2) {
-                        int aux = n2; 
-                        nums1[j] = n; 
-                        nums1[j + 1] = aux; 
-                    }
-                    else {
-                        int aux = n; 
-                        nums1[j] = n2; 
-                        nums1[j + 1] = aux; 
-                        break;
-                    }
-                }
 
+            for (int i = 0; i < n; i++) {
+                    int n = nums2[i];
+                        
+                    for (int j = 0; j <= nums1.size(); j++) {
+                            int n2 = nums1[j];
+                            if (nums1[j] == 0) {
+                                nums1[j] = n;
+                                break;
+                            }
 
-            }
-        }
+                        }      
+             }
+            std::sort(nums1.begin(), nums1.end());      
         for (int j = 0; j <= nums1.size()-1; j++)
         {
             std::cout << nums1[j];
